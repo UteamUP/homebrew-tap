@@ -5,13 +5,13 @@
 class Uteamup < Formula
   desc "UteamUP CLI - Command-line interface for the UteamUP platform"
   homepage "https://uteamup.com"
-  version "1.71.0"
+  version "1.72.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/uteamup/cli/releases/download/1.71.0/uteamup_1.71.0_darwin_amd64.tar.gz"
-      sha256 "4985a18788a160584a4b9f53b1ca5b1b743db50e45f5837c940c2b00c6ebce21"
+      url "https://github.com/uteamup/cli/releases/download/1.72.0/uteamup_1.72.0_darwin_amd64.tar.gz"
+      sha256 "8b7d742310547e8b72468241a66c4b350d96529b4d800b3a2a0be77c9e676283"
 
       define_method(:install) do
         bin.install "uteamup"
@@ -19,8 +19,8 @@ class Uteamup < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/uteamup/cli/releases/download/1.71.0/uteamup_1.71.0_darwin_arm64.tar.gz"
-      sha256 "fd54b33e939412ed0696d455800635a9bdf76e9044fd4bcf572ec7f90cb6148e"
+      url "https://github.com/uteamup/cli/releases/download/1.72.0/uteamup_1.72.0_darwin_arm64.tar.gz"
+      sha256 "acfdfab24de022430f445fc4bce246d0e85382c96c5ea677c3b3c29920b31f19"
 
       define_method(:install) do
         bin.install "uteamup"
@@ -31,16 +31,16 @@ class Uteamup < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/uteamup/cli/releases/download/1.71.0/uteamup_1.71.0_linux_amd64.tar.gz"
-      sha256 "2a3630e824bce32455eff7a3c88afaf09fe9653e90ac00957a5d3d0247f795f6"
+      url "https://github.com/uteamup/cli/releases/download/1.72.0/uteamup_1.72.0_linux_amd64.tar.gz"
+      sha256 "21374d12b5a3b1c556b447e847174cc85524267cb1e7b772dfbb8e2bfac327b7"
       define_method(:install) do
         bin.install "uteamup"
         ln_sf bin/"uteamup", bin/"ut"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/uteamup/cli/releases/download/1.71.0/uteamup_1.71.0_linux_arm64.tar.gz"
-      sha256 "b6a8a031fa1dcc523c699489fd2f7196b7ba67ebdc61c50242a0cafc123f3d0c"
+      url "https://github.com/uteamup/cli/releases/download/1.72.0/uteamup_1.72.0_linux_arm64.tar.gz"
+      sha256 "3ff579d3bf64e3252d4196d5e018c64e3616aa5a9e8c7dd7338a2ce64762b245"
       define_method(:install) do
         bin.install "uteamup"
         ln_sf bin/"uteamup", bin/"ut"
